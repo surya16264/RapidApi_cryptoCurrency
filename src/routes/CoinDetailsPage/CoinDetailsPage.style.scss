@@ -1,0 +1,146 @@
+@import '../../style/mixin.scss';
+@import '../../style/media.scss';
+
+.DetailsPage {
+    padding-block: 20px;
+
+    @include desktop {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto; 
+    }
+
+    h1, p {
+        color: #fff;
+        text-align: justify;
+    }
+
+    @include mobile {
+        h1 {
+            padding-inline: 10px;
+        }
+    }
+
+    .DetailsBlock {
+        display: flex;
+        align-content: center;
+        column-gap: 2rem;
+        padding-block: 4rem;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+
+        .backButton {
+            padding-block: 2rem;
+
+            button {
+                width: 100px;
+                height: 30px;
+                border: none;
+                border-radius: 5px;
+                background: #ff00ea;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 800;
+                cursor: pointer;
+            }
+
+            @include mobile {
+                padding-inline: 10px;
+            }
+        }
+
+        .leftBlock {
+            @include desktop {
+                padding-inline: 2rem 4rem;
+                border-right: 2px solid #fff;
+            }
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .coinImg {
+                width: 300px;
+                height: 300px;
+            }
+
+            .coinName {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    color: #fff;
+                    font-size: 30px;
+                    font-style: italic;
+                    font-family: serif;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .rightBlock {
+            width: 100%;
+
+            .topContent {
+                display: flex;
+                justify-content: space-between;
+
+                @include mobile {
+                    flex-wrap: wrap;
+                    padding-inline: 10px;
+                }
+
+                .coinPrice {
+                    p span {
+                        color: #2bb940;
+                    }
+                }
+
+                .coinChange {
+                    p {
+                        display: flex;
+                        column-gap: 10px;
+
+                        span {
+                            .triangleUp {
+                                @include triangleUp
+                            }
+                
+                            .triangleDown {
+                                @include triangleDown
+                            }
+                        }
+                    }
+                }
+
+                .coinSymbol {
+                    p {
+                        strong {
+                            color: #ff00ea;
+                        }
+                    }
+                }
+            }
+
+            .BottomContent {
+                @include mobile {
+                    padding-inline: 10px;
+                }
+
+                h3 {
+                    color: #fff;
+                    font-size: 20px;
+                }
+            }
+        }
+    }   
+}

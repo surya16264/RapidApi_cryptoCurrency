@@ -1,0 +1,90 @@
+@import '../../style/mixin.scss';
+@import '../../style/media.scss';
+
+.ListingPage {
+    padding-block: 20px;
+
+    @include desktop {
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: #fff;
+
+        @include mobile {
+            padding-inline: 10px;
+        }
+    }
+
+    .ListingBlock {
+        @include mobile {
+            padding-inline: 10px;
+        }
+
+        .coinsTable {
+            width: 100%;
+            border-collapse: collapse;
+
+            thead {
+                background: linear-gradient(25deg,#2600fc,#ff00ea);
+                
+                th {
+                    text-align: left;
+                    padding: 2rem 1rem;
+                    color: #fff;
+                    width: 28%;
+
+                    @include mobile {
+                        padding: 1rem 0;
+                        width: unset;
+                    }
+                }
+            }
+
+            tr {
+                border-bottom: 1px solid #f4f4f4;
+            }
+
+            td {
+                @include desktop{
+                    padding-inline: 1rem;
+                }
+            }
+        }
+
+        .CoinsList {
+            text-decoration: none;
+            color: #fff;
+
+            .coinImg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .priceChangeData,
+            .coinNameAndImg {
+                display: flex;
+                align-items: center;
+                column-gap: 1rem;
+
+                @include mobile {
+                    column-gap: 5px;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+
+            .triangleUp {
+                @include triangleUp
+            }
+
+            .triangleDown {
+                @include triangleDown
+            }
+        }
+    }
+}

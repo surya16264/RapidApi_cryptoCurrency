@@ -1,0 +1,36 @@
+.Loader {
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    height: 100vh;
+
+    .loader {
+        animation: rotate 2s linear infinite;
+        background-image: linear-gradient(#fff 16px,transparent 0),linear-gradient(#ff00ea 16px,transparent 0),linear-gradient(#ff00ea 16px,transparent 0),linear-gradient(#fff 16px,transparent 0);
+        background-position: 0 0,0 100%,100% 0,100% 100%;
+        background-repeat: no-repeat;
+        background-size: 16px 16px;
+        height: 64px;
+        margin: 10rem auto;
+        position: relative;
+        width: 64px;
+    }
+
+    @keyframes rotate {
+        0% {
+          width: 64px;
+          height: 64px;
+          transform: rotate(0deg);
+        }
+        50% {
+          width: 30px;
+          height: 30px;
+          transform: rotate(180deg);
+        }
+        100% {
+          width: 64px;
+          height: 64px;
+          transform: rotate(360deg);
+        }
+      }
+}

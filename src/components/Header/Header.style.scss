@@ -1,0 +1,42 @@
+@import '../../style/media.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+
+    @include mobile {
+        padding: 0 10px;
+    }
+
+    .Header-logo {
+        h1 {
+            color: #fff;
+        }
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .nav-link {
+            display: flex;
+            padding: 0;
+            gap: 2rem;
+
+            li {
+                list-style: none;
+                .header-link {
+                    text-decoration: none;
+                    color: #fff;
+                    &:hover {
+                        color: #ff00ea;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

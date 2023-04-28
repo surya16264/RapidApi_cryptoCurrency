@@ -1,0 +1,15 @@
+@mixin triangleUp {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 20px solid  #2bb940;
+}
+
+@mixin triangleDown {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 20px solid #ee3f30;
+}
