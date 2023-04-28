@@ -1,4 +1,4 @@
-#Hosted in Firebase url: https://rapidapi-crypto-currency.web.app/
+# Hosted in Firebase url: https://rapidapi-crypto-currency.web.app/
 
 
 # Getting Started with Create React App
